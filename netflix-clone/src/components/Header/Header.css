@@ -1,0 +1,18 @@
+.Netflix_logo_container img {
+  width: 100px; /* Adjust logo width as needed */
+  border: 1px white solid;
+}
+
+.header_outer_container {
+  position:sticky;
+  z-index: 1;
+}
+
+nav {
+  height: 10vh;
+}
+
+nav ul {
+  justify-content: space-around;
+  width: 100%;
+}

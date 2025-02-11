@@ -2,6 +2,7 @@
   color: grey;
   justify-content: center;
   display: flex;
+  margin-top: 5vh;
 }
 
 .footer_inner_container {

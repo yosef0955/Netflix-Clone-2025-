@@ -9,7 +9,7 @@ const base_Url = "https://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState(""); // ✅ NEW: State to store YouTube trailer URL
+  const [trailerUrl, setTrailerUrl] = useState(""); 
 
   useEffect(() => {
     async function fetchData() {
@@ -22,7 +22,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   const handleClick = async (movie) => {
     if (trailerUrl) {
-      setTrailerUrl(""); // Close current trailer before opening a new one
+      setTrailerUrl(""); 
     }
 
     try {
@@ -53,7 +53,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           <div
             key={movie.id}
             className="row_poster_container"
-            onClick={() => handleClick(movie)} // ✅ NEW: Click to show trailer
+            onClick={() => handleClick(movie)} 
           >
             <img
               src={`${base_Url}${

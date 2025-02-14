@@ -9,32 +9,29 @@ function Banner() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [movies, setMovies] = useState([]);
 
-  // Fetch movie data
   useEffect(() => {
     const fetchData = async () => {
       try {
         const request = await axios.get(requests.fetchNetflixOriginals);
-        setMovies(request.data.results); // Store all movies
-        setMovie(request.data.results[0]); // Set the initial movie
+        setMovies(request.data.results); 
+        setMovie(request.data.results[0]); 
       } catch (error) {
         console.log("Error fetching data:", error);
       }
     };
 
-    fetchData(); // Fetch data when component mounts
+    fetchData();
 
-    // Set interval to change the banner every 3 seconds (3000ms)
     const bannerInterval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length); // Loop through movies
-    }, 3000); // Change every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % movies.length); 
+    }, 3000); 
 
-    return () => clearInterval(bannerInterval); // Cleanup interval on unmount
+    return () => clearInterval(bannerInterval); 
   }, [movies.length]);
 
-  // Update the banner with the current movie based on index
   useEffect(() => {
     if (movies.length > 0) {
-      setMovie(movies[currentIndex]); // Update the current movie for banner
+      setMovie(movies[currentIndex]); 
     }
   }, [currentIndex, movies]);
 

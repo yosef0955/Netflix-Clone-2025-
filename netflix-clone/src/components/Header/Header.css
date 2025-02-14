@@ -1,18 +1,38 @@
 .Netflix_logo_container img {
-  width: 100px; /* Adjust logo width as needed */
-  border: 1px white solid;
+  width: 150px; 
 }
 
 .header_outer_container {
-  position:sticky;
+  width: 100%;
+  position: fixed; 
   z-index: 1;
+  align-items: center;
+  background: transparent; 
+  transition: background 0.3s ease-in-out;
 }
+.header_outer_container.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
 
 nav {
-  height: 10vh;
+  height: 13vh;
 }
 
-nav ul {
-  justify-content: space-around;
-  width: 100%;
+.left_container {
+  align-items: center;
 }
+
+nav ul li {
+  opacity:0.7;
+  color: white;
+}
+
+nav li:hover{
+    opacity:1;
+    cursor: pointer;
+}
+
+
+

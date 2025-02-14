@@ -19,7 +19,8 @@
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-youtube": "^10.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
